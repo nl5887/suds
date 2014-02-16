@@ -89,7 +89,7 @@ class HttpTransport(Transport):
         """
         Add cookies in the cookiejar to the request.
         @param u2request: A urllib2 request.
-        @rtype: u2request: urllib2.Requet.
+        @rtype: u2request: urllib2.Request.
         """
         self.cookiejar.add_cookie_header(u2request)
         
@@ -97,7 +97,7 @@ class HttpTransport(Transport):
         """
         Add cookies in the request to the cookiejar.
         @param u2request: A urllib2 request.
-        @rtype: u2request: urllib2.Requet.
+        @rtype: u2request: urllib2.Request.
         """
         self.cookiejar.extract_cookies(fp, u2request)
         
@@ -105,7 +105,7 @@ class HttpTransport(Transport):
         """
         Open a connection.
         @param u2request: A urllib2 request.
-        @type u2request: urllib2.Requet.
+        @type u2request: urllib2.Request.
         @return: The opened file-like urllib2 object.
         @rtype: fp
         """
